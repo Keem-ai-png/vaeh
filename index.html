@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#321d25">
+<meta name="description" content="A heartfelt little collection of gratitude, photos, videos, and memories.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<title>A little thank-you, just for you</title>
+<style>
+:root{--wine:#572b3b;--rose:#c87983;--cream:#fff7ed;--gold:#e6b86b;--ink:#39252b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',Arial,sans-serif;overflow-x:hidden}
+h1,h2,.letter,.thanks .big,footer p{font-family:'Playfair Display',Georgia,serif}
+button{font:inherit}
+.grain:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.09;z-index:10;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E")}
+.hero{min-height:100svh;position:relative;display:grid;place-items:center;text-align:center;padding:90px 22px;color:#fff8ee;background:radial-gradient(ellipse at 50% 25%,#87505b 0,#512d3b 43%,#251b24 100%);overflow:hidden}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:26%;background:linear-gradient(transparent,rgba(17,12,17,.35));pointer-events:none}
+.eyebrow{font-family:'DM Sans',Arial,sans-serif;letter-spacing:.25em;text-transform:uppercase;font:11px Arial,sans-serif;color:#f1c98b}
+.hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(3.2rem,9vw,7.7rem);line-height:.92;font-weight:400;max-width:950px;margin:25px auto}
+.hero h1 em{color:#f1c98b;font-weight:400}
+.hero p{font:15px/1.8 Arial,sans-serif;max-width:520px;margin:22px auto;color:#f7e7df}
+.primary{display:inline-flex;align-items:center;gap:12px;margin-top:22px;padding:15px 23px;border:1px solid #f0c98e;border-radius:50px;background:#f0c98e;color:#39252b;text-decoration:none;font:12px Arial,sans-serif;letter-spacing:.08em;transition:.3s;cursor:pointer}
+.primary:hover{transform:translateY(-5px) scale(1.04);box-shadow:0 15px 35px #140d1480;background:#fff0cf}
+.floating{position:absolute;font-size:clamp(20px,3vw,38px);opacity:.75;animation:drift 7s ease-in-out infinite}
+.f1{top:14%;left:12%}.f2{top:26%;right:13%;animation-delay:-2s}.f3{bottom:20%;left:18%;animation-delay:-4s}.f4{bottom:17%;right:18%;animation-delay:-1s}
+@keyframes drift{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-22px) rotate(10deg)}}
+.scroll{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);font:10px Arial,sans-serif;letter-spacing:.22em;color:#f6d8c8}
+section{padding:100px 22px;position:relative}
+.wrap{width:min(1050px,100%);margin:auto}
+.section-kicker{font:11px Arial,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:#a65e6d;text-align:center}
+h2{font-weight:400;font-size:clamp(2.3rem,5vw,4.3rem);line-height:1.05;text-align:center;margin:17px auto 22px}
+.intro{max-width:720px;margin:0 auto;text-align:center;font-size:19px;line-height:1.9;color:#654b50}
+.note{background:#f2e4d8}
+.letter{max-width:760px;margin:40px auto 0;padding:clamp(26px,6vw,58px);background:#fffaf4;border:1px solid #ead5c8;box-shadow:0 20px 60px #5b354012;position:relative;transform:rotate(-.4deg);transition:.4s}
+.letter:hover{transform:rotate(0) translateY(-6px);box-shadow:0 28px 70px #5b354022}
+.letter:before{content:"✦";position:absolute;right:25px;top:17px;color:#d7a65d;font-size:25px}
+.letter p{font-size:18px;line-height:1.9;color:#5c4247}
+.signature{font-style:italic;color:#a65e6d!important;font-size:24px!important;margin-top:28px}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:42px}
+.photo{position:relative;overflow:hidden;border-radius:12px;background:#e8d4c8;aspect-ratio:4/5;box-shadow:0 12px 30px #4b29301a}
+.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.8,.2,1),filter .7s}
+.photo:hover img{transform:scale(1.08);filter:saturate(1.12)}
+.photo span{position:absolute;inset:auto 0 0;padding:35px 15px 14px;color:white;background:linear-gradient(transparent,#21151bc9);font:12px Arial,sans-serif;letter-spacing:.08em;opacity:0;transition:.35s}
+.photo:hover span{opacity:1}
+.videos{background:#34232c;color:#fff6ec}
+.videos .section-kicker{color:#e7bb7d}
+.videos .intro{color:#e7d4d0}
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
+.video-card{background:linear-gradient(145deg,#553744,#382630);padding:10px;border:1px solid #956879;border-radius:14px;transition:transform .45s,box-shadow .45s;box-shadow:0 12px 30px #120b1030}
+.video-card:hover{transform:translateY(-8px);box-shadow:0 18px 35px #120b10a6;border-color:#e5bd82}
+.video-card video{width:100%;aspect-ratio:9/14;object-fit:cover;background:#1d151b;border-radius:4px;display:block}
+.video-card p{font:12px Arial,sans-serif;letter-spacing:.08em;color:#f0d4c6;text-align:center;margin:12px 4px 5px}
+.thanks{background:linear-gradient(135deg,#f4e5d8,#f8eee6);text-align:center}
+.thanks .big{font-size:clamp(3rem,9vw,7rem);color:#8d4d5d;line-height:1;margin:25px 0}
+.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:40px auto;max-width:850px}
+.reason{padding:25px 18px;background:#fffaf4;border:1px solid #ead6c9;transition:.3s}
+.reason:hover{transform:translateY(-8px) rotate(-1deg);box-shadow:0 16px 35px #59313a18}
+.reason b{display:block;color:#9b5867;font-size:25px;margin-bottom:10px;font-weight:400}
+.reason p{font:13px/1.7 Arial,sans-serif;color:#6d5559;margin:0}
+footer{padding:50px 20px;text-align:center;background:#251b24;color:#f5dfd4}
+footer p{font-size:20px;line-height:1.6;margin:0}
+footer small{display:block;margin-top:20px;color:#c79a88;font:10px Arial,sans-serif;letter-spacing:.16em}
+.heart{display:inline-block;color:#d77b83;animation:beat 1.4s infinite}
+@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.22)}30%{transform:scale(1)}45%{transform:scale(1.14)}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}
+.reveal.show{opacity:1;transform:none}
+#surprise{margin-top:18px;display:none;font-size:18px;line-height:1.8;color:#75434f}
+#surprise.show{display:block;animation:fade .8s both}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+/* A more polished, animated editorial look */
+:root{--wine:#572b3b;--rose:#c87983;--cream:#fff7ed;--gold:#e6b86b;--ink:#39252b}
+::selection{background:#e8bdc0;color:#38212b}
+.hero>div{position:relative;z-index:2;animation:heroRise 1.15s cubic-bezier(.2,.75,.25,1) both}
+.hero .eyebrow{animation:softFade 1s .15s both}
+.hero h1{letter-spacing:-.045em;text-shadow:0 8px 35px #140d1460}
+.hero h1 em{display:inline-block;text-shadow:0 0 35px #f1c98b45;animation:titleGlow 4s ease-in-out infinite}
+.hero p{font-size:clamp(14px,1.5vw,17px)}
+.primary{font-weight:700;box-shadow:0 8px 24px #1c101b35;position:relative;overflow:hidden}
+.primary:after{content:"";position:absolute;top:-70%;left:-45%;width:28%;height:240%;background:#ffffff80;transform:rotate(25deg);transition:left .7s}
+.primary:hover:after{left:130%}
+.letter{border-radius:4px 18px 4px 18px;box-shadow:0 22px 70px #5b354022}
+.letter p{font-family:'Playfair Display',Georgia,serif}
+.photo{border-radius:14px;transform:translateZ(0);transition:transform .5s,box-shadow .5s}
+.photo:after{content:"";position:absolute;inset:0;border:1px solid #fff8;border-radius:inherit;pointer-events:none;opacity:.65}
+.photo:hover{transform:translateY(-7px) rotate(-.6deg);box-shadow:0 24px 45px #4b293035}
+.photo span{font-weight:600;letter-spacing:.12em;backdrop-filter:blur(3px)}
+.video-card video{transition:filter .4s,transform .5s}
+.video-card:hover video{filter:saturate(1.12) contrast(1.03)}
+.reason{border-radius:12px;box-shadow:0 8px 24px #59313a0b}
+.reason b{font-family:'Playfair Display',Georgia,serif}
+footer{position:relative;overflow:hidden}
+footer:before,footer:after{content:"✦";position:absolute;color:#d8a66a55;font-size:90px;animation:slowSpin 18s linear infinite}
+footer:before{left:8%;top:10%}footer:after{right:8%;bottom:2%;animation-direction:reverse}
+.floating{filter:drop-shadow(0 5px 12px #10081050)}
+.sparkle{position:fixed;z-index:11;pointer-events:none;color:#f2c987;text-shadow:0 0 12px #f2c987;animation:sparkleFly 1.4s ease-out forwards}
+.heart{filter:drop-shadow(0 0 8px #d77b8360)}
+.scroll{animation:scrollPulse 2s ease-in-out infinite}
+.reveal{opacity:0;transform:translateY(42px) scale(.985);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.show{opacity:1;transform:none}
+.photo,.video-card,.reason{animation:cardAppear .8s both;animation-timeline:view();animation-range:entry 0% entry 25%}
+@keyframes heroRise{from{opacity:0;transform:translateY(35px)}to{opacity:1;transform:translateY(0)}}
+@keyframes softFade{from{opacity:0;letter-spacing:.45em}to{opacity:1;letter-spacing:.25em}}
+@keyframes titleGlow{0%,100%{text-shadow:0 0 15px #f1c98b25}50%{text-shadow:0 0 38px #f1c98b85}}
+@keyframes slowSpin{to{transform:rotate(360deg)}}
+@keyframes sparkleFly{0%{opacity:0;transform:translate(0,0) scale(.4) rotate(0)}20%{opacity:1}100%{opacity:0;transform:translate(var(--dx),-75px) scale(1.5) rotate(100deg)}}
+@keyframes scrollPulse{0%,100%{opacity:.55;transform:translate(-50%,0)}50%{opacity:1;transform:translate(-50%,-7px)}}
+@keyframes cardAppear{from{opacity:.3;transform:translateY(24px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(hover:hover){.photo img{will-change:transform}.video-card:hover{transform:translateY(-9px) scale(1.015)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;animation-timeline:auto!important}.reveal{opacity:1;transform:none}}
+
+@media(max-width:760px){.gallery-grid{grid-template-columns:repeat(2,1fr)}.video-grid{grid-template-columns:repeat(2,1fr)}.reasons{grid-template-columns:1fr}.hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(3rem,16vw,5rem)}section{padding:75px 18px}}
+@media(max-width:440px){.video-grid{grid-template-columns:1fr 1fr;gap:10px}.video-card{padding:6px}.gallery-grid{gap:9px}}
+</style>
+</head>
+<body class="grain">
+<header class="hero">
+  <span class="floating f1">🍂</span><span class="floating f2">✦</span><span class="floating f3">♡</span><span class="floating f4">🍁</span>
+  <div>
+    <div class="eyebrow">A little something from my heart</div>
+    <h1>Today, and always,<br><em>I'm thankful for you.</em></h1>
+    <p>For the laughter, the little moments, the memories, and the way you make ordinary days feel special.</p>
+    <a class="primary" href="#letter">OPEN YOUR LITTLE SURPRISE <span>♡</span></a>
+  </div>
+  <div class="scroll">SCROLL A LITTLE ↓</div>
+</header>
+
+<section class="note" id="letter">
+ <div class="wrap reveal">
+  <div class="section-kicker">A note for you</div>
+  <h2>There are so many things<br> I want to thank you for.</h2>
+  <div class="letter">
+   <p>My love,</p>
+   <p>Sometimes I wish I could pause time in the middle of one of our happy moments, just so I could hold on to it a little longer. You have brought so much warmth, laughter, and happiness into my life, and I don't ever want you to think that I take that for granted.</p>
+   <p>Thank you for being you. Thank you for the smiles that brighten my day, the conversations that I never want to end, the silly moments that become my favourite memories, and the comfort of simply having you in my life.</p>
+   <p>I am grateful for every picture, every video, every laugh, every little adventure, and even the quiet moments that might seem ordinary but mean so much to me. You make life feel sweeter just by being part of it.</p>
+   <p>I may not always find the perfect words, but I hope my actions keep showing you how much you matter. I want to keep making memories with you, cheering you on, learning together, and reminding you that you are appreciated.</p>
+   <p>Today is a reminder to say what I should say more often: I am genuinely thankful for you. Not just for what you do, but for the person you are.</p>
+   <p class="signature">With all my appreciation, always. <span class="heart">♥</span></p>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap reveal">
+  <div class="section-kicker">Little moments, big memories</div>
+  <h2>My favourite kind of gallery.</h2>
+  <p class="intro">A few snapshots of the person who makes my days brighter. Every photo holds a little moment I’m glad I get to remember.</p>
+  <div class="gallery-grid" id="gallery">
+   <!-- Your photos are loaded from the assets folder. -->
+  </div>
+ </div>
+</section>
+
+<section class="videos">
+ <div class="wrap reveal">
+  <div class="section-kicker">Press play on a memory</div>
+  <h2>Moments I want to keep.</h2>
+  <p class="intro">The little clips, the laughs, the looks, the memories. I could watch these moments over and over.</p>
+  <div class="video-grid" id="videos">
+   <!-- Your videos are loaded from the assets folder. -->
+  </div>
+ </div>
+</section>
+
+<section class="thanks">
+ <div class="wrap reveal">
+  <div class="section-kicker">A few reasons, out of a million</div>
+  <div class="big">Thank you. <span class="heart">♥</span></div>
+  <p class="intro">If I had to put my gratitude into a few words, it would sound a little like this:</p>
+  <div class="reasons">
+   <div class="reason"><b>01 · Your heart</b><p>For the kindness, care, and lovely person you are.</p></div>
+   <div class="reason"><b>02 · Your laughter</b><p>For making even the simplest moments feel memorable.</p></div>
+   <div class="reason"><b>03 · Us</b><p>For every memory so far, and all the beautiful ones still ahead.</p></div>
+  </div>
+  <button class="primary" id="surpriseBtn">ONE MORE THING… ♡</button>
+  <p id="surprise">If I could choose one thing to be grateful for today, it would be having you in my life. I hope you always feel seen, valued, respected, and appreciated. You deserve so much happiness. <span class="heart">♥</span></p>
+ </div>
+</section>
+
+<footer>
+ <p>In a world full of things to be thankful for,<br><em>you will always be one of my favourites.</em></p>
+ <small>MADE WITH GRATITUDE, JUST FOR YOU · <span class="heart">♥</span></small>
+</footer>
+<script>
+const photoCaptions = ["A moment worth keeping","One of my favourite memories","A little piece of happiness","Just you being you","A memory I treasure","A smile I’m thankful for"];
+const gallery = document.getElementById('gallery');
+for(let i=1;i<=18;i++){
+  const card=document.createElement('div'); card.className='photo';
+  card.innerHTML=`<img loading="lazy" src="assets/memory-photo-${i}.jpg" alt="A favourite photo memory"><span>${photoCaptions[i-1]||'A favourite memory'}</span>`;
+  gallery.appendChild(card);
+}
+const videos = document.getElementById('videos');
+for(let i=1;i<=9;i++){
+  const card=document.createElement('div'); card.className='video-card';
+  card.innerHTML=`<video controls playsinline preload="metadata"><source src="assets/memory-video-${i}.mp4" type="video/mp4">Your browser does not support this video.</video><p>MEMORY NO. ${String(i).padStart(2,'0')}</p>`;
+  videos.appendChild(card);
+}
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');observer.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.getElementById('surpriseBtn').addEventListener('click',()=>{
+ const note=document.getElementById('surprise'); note.classList.toggle('show');
+ document.getElementById('surpriseBtn').textContent=note.classList.contains('show')?'A LITTLE REMINDER FOR YOU ♥':'ONE MORE THING… ♡';
+});
+// Tiny celebratory sparkles follow occasional pointer movement.
+let sparkleCooldown=0;
+function makeSparkle(x,y){
+ const now=Date.now(); if(now-sparkleCooldown<90)return; sparkleCooldown=now;
+ const el=document.createElement('span'); el.className='sparkle'; el.textContent=['✦','✧','♡','·'][Math.floor(Math.random()*4)];
+ el.style.left=x+'px'; el.style.top=y+'px'; el.style.setProperty('--dx',(Math.random()*70-35)+'px');
+ document.body.appendChild(el); setTimeout(()=>el.remove(),1450);
+}
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+ document.addEventListener('pointermove',e=>{if(Math.random()>.78)makeSparkle(e.clientX,e.clientY)},{passive:true});
+ // Gentle stagger as the gallery and video cards enter view.
+ const staggerObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+  if(entry.isIntersecting){[...entry.target.children].forEach((child,i)=>{child.style.transitionDelay=(i%6)*65+'ms'});staggerObserver.unobserve(entry.target)}
+ }),{threshold:.08});
+ staggerObserver.observe(gallery); staggerObserver.observe(videos);
+}
+
+</script>
+</body>
+</html>
